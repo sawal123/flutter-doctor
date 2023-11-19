@@ -1,4 +1,4 @@
-import 'package:doctor/page/home.dart';
+
 import 'package:flutter/material.dart';
 
 class loginApp extends StatefulWidget {
@@ -30,7 +30,7 @@ class _loginAppState extends State<loginApp> {
                 child: Image.asset('asset/images/sign/login.png'),
               ),
             ),
-            Text(
+            const Text(
               "Login",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
@@ -77,7 +77,7 @@ class _loginAppState extends State<loginApp> {
             SizedBox(
               height: 10,
             ),
-            Row(
+            const Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(
