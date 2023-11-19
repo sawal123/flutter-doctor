@@ -1,5 +1,7 @@
 import 'package:doctor/page/home.dart';
 import 'package:doctor/page/login.dart';
+import 'package:doctor/page/message.dart';
+import 'package:doctor/particle/navigasi.dart';
 import 'package:flutter/material.dart';
 
 
@@ -17,7 +19,9 @@ class MyApp extends StatelessWidget {
      initialRoute: '/login',
      routes: {
       '/login':(context)=> loginApp(),
-      '/home':(context) => Home()
+      '/home':(context) => Home(),
+      '/message' :(context) => Message(),
+      '/navigasi':(context) => Navigasi()
      },
     );
   }

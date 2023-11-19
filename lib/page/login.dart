@@ -101,7 +101,7 @@ class _loginAppState extends State<loginApp> {
               width: double.infinity,
               child: ElevatedButton(
                   onPressed: () {
-                   Navigator.pushNamed(context, '/home');
+                   Navigator.pushNamed(context, '/navigasi');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFF068CB7),

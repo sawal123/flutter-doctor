@@ -2,6 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
+ final List<String> imgList = [
+      'asset/images/vector/surgeon 1.png',
+      'asset/images/vector/pediatrician.png',
+      'asset/images/vector/dentist.png',
+    ];
+ final List<String> nameList = [
+      'General Practitioners',
+      'Pediatrician',
+      'Dentist',
+    ];
+ final List<String> nameList2 = [
+      'Cardiologist',
+      'Surgeon',
+      'Dermatologist',
+    ];
+
+ final List<String> imgList2 = [
+      'asset/images/vector/cardio.png',
+      'asset/images/vector/surgeon.png',
+      'asset/images/vector/dermatologist.png',
+    ];
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -13,10 +34,14 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
+   
     return Scaffold(
+      
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(right: 20, left: 20, top: 60),
+          padding: const EdgeInsets.only(right: 20, left: 20, top: 40),
           child: Container(
             // decoration: BoxDecoration(color: Colors.amber),
             width: double.infinity,
@@ -28,7 +53,7 @@ class _HomeState extends State<Home> {
                     Row(
                       children: [
                         Image.asset('asset/images/vector/user.png'),
-                        SizedBox(width: 16),
+                        const SizedBox(width: 16),
                         const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -48,7 +73,7 @@ class _HomeState extends State<Home> {
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
                   children: [
                     const Expanded(
@@ -68,11 +93,11 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                     ),
-                    SizedBox(width: 20),
+                    const SizedBox(width: 20),
                     Container(
                       width: 50,
                       height: 50,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.blue,
                         borderRadius: BorderRadius.all(Radius.circular(100)),
                       ),
@@ -82,17 +107,17 @@ class _HomeState extends State<Home> {
                           'asset/images/icon/opsi.svg',
                           width: 16,
                           height: 16,
-                          color: Color.fromARGB(255, 255, 255, 255),
+                          color: const Color.fromARGB(255, 255, 255, 255),
                           fit: BoxFit.contain,
                         ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Row(
+                const Row(
                   children: [
                     Text(
                       'Top Doctor',
@@ -101,8 +126,7 @@ class _HomeState extends State<Home> {
                     ),
                   ],
                 ),
-                SizedBox(height: 16),
-               
+                const SizedBox(height: 16),
                 CarouselSlider(
                   options: CarouselOptions(
                     height: 158.0,
@@ -120,22 +144,99 @@ class _HomeState extends State<Home> {
                       builder: (BuildContext context) {
                         return Container(
                           width: MediaQuery.of(context).size.width,
-                          margin: EdgeInsets.symmetric(horizontal: 2.0),
-                         
+                          margin: const EdgeInsets.symmetric(horizontal: 2.0),
                           child: ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
+                            borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset(
                               imagePath,
                               fit: BoxFit.cover,
-                              
-                             
                             ),
                           ),
                         );
                       },
                     );
                   }).toList(),
-                )
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Row(
+                  children: [
+                    Text(
+                      'Specialists',
+                      style:
+                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: List.generate(
+                    3,
+                    (index) => Expanded(
+                      child: Column(
+                        children: [
+                          Container(
+                            width: screenWidth / 4,
+                            height: screenHeight / 7,
+                            padding: const EdgeInsets.all(5),
+                            decoration: const BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                color: Color.fromRGBO(230, 248, 254, 1)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                    imgList[index]),
+                                 Text(nameList[index],
+                                  style: TextStyle(
+                                      color: Color.fromRGBO(6, 140, 183, 1)),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20,),
+                Row(
+                  children: List.generate(
+                    3,
+                    (index) => Expanded(
+                      child: Column(
+                        children: [
+                          Container(
+                            width: screenWidth / 4,
+                            height: screenHeight / 7,
+                            padding: const EdgeInsets.all(5),
+                            decoration: const BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                                color: Color.fromRGBO(230, 248, 254, 1)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                    imgList2[index]),
+                                 Text(nameList2[index],
+                                  style: TextStyle(
+                                      color: Color.fromRGBO(6, 140, 183, 1)),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
