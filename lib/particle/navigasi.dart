@@ -1,9 +1,10 @@
 import 'package:doctor/page/home.dart';
+import 'package:doctor/page/location.dart';
 import 'package:doctor/page/message.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-final List<Widget> page = [Home(), Message()];
+final List<Widget> page = [Home(), Message(), Location()];
 
 class Navigasi extends StatefulWidget {
   @override

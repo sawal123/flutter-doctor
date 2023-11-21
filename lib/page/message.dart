@@ -25,7 +25,9 @@ class _MessageState extends State<Message> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushReplacementNamed(context, '/navigasi');
+                    },
                     child: SvgPicture.asset('asset/images/icon/back.svg'),
                   ),
                   Text(
