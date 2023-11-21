@@ -27,6 +27,7 @@ class _LocationState extends State<Location> {
   @override
   Widget build(BuildContext context) {
     double he = MediaQuery.of(context).size.height;
+    double wi = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(right: 20, left: 20, top: 40),
@@ -77,6 +78,7 @@ class _LocationState extends State<Location> {
                               borderRadius: BorderRadius.circular(10),
                               child: Image.asset(
                                 ima,
+                                width: wi,
                                 fit: BoxFit.contain,
                               ),
                             ),
