@@ -178,25 +178,30 @@ class _HomeState extends State<Home> {
                     (index) => Expanded(
                       child: Column(
                         children: [
-                          Container(
-                            width: screenWidth / 4,
-                            height: screenHeight / 7,
-                            padding: const EdgeInsets.all(5),
-                            decoration: const BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                                color: Color.fromRGBO(230, 248, 254, 1)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                    imgList[index]),
-                                 Text(nameList[index],
-                                  style: TextStyle(
-                                      color: Color.fromRGBO(6, 140, 183, 1)),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ],
+                          InkWell(
+                            onTap: (){
+                              Navigator.pushNamed(context, '/listDoctor');
+                            },
+                            child: Container(
+                              width: screenWidth / 4,
+                              height: screenHeight / 7,
+                              padding: const EdgeInsets.all(5),
+                              decoration: const BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10)),
+                                  color: Color.fromRGBO(230, 248, 254, 1)),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                      imgList[index]),
+                                   Text(nameList[index],
+                                    style: TextStyle(
+                                        color: Color.fromRGBO(6, 140, 183, 1)),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ],
@@ -219,17 +224,22 @@ class _HomeState extends State<Home> {
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(10)),
                                 color: Color.fromRGBO(230, 248, 254, 1)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                    imgList2[index]),
-                                 Text(nameList2[index],
-                                  style: TextStyle(
-                                      color: Color.fromRGBO(6, 140, 183, 1)),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ],
+                            child: InkWell(
+                              onTap: (){
+                                Navigator.pushNamed(context, '/listDoctor');
+                              },
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                      imgList2[index]),
+                                   Text(nameList2[index],
+                                    style: TextStyle(
+                                        color: Color.fromRGBO(6, 140, 183, 1)),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ],

@@ -1,4 +1,6 @@
+import 'package:doctor/page/chat.dart';
 import 'package:doctor/page/home.dart';
+import 'package:doctor/page/listDoctor.dart';
 import 'package:doctor/page/location.dart';
 import 'package:doctor/page/login.dart';
 import 'package:doctor/page/message.dart';
@@ -24,6 +26,8 @@ class MyApp extends StatelessWidget {
       '/message' :(context) => Message(),
       '/location':(context) => Location(),
       '/navigasi':(context) => Navigasi(),
+      '/listDoctor':(context) => ListDoctor(),
+      '/chat': (context)=>Chat()
      },
     );
   }

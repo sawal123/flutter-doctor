@@ -27,7 +27,7 @@ class _LocationState extends State<Location> {
   @override
   Widget build(BuildContext context) {
     double he = MediaQuery.of(context).size.height;
-    double wi = MediaQuery.of(context).size.height;
+    double wi = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(right: 20, left: 20, top: 40),
