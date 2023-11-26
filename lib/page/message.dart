@@ -46,23 +46,28 @@ class _MessageState extends State<Message> {
                 child: ListView.builder(
                   itemCount: items.length,
                   itemBuilder: (context, index) {
-                    return ListTile(
-                      leading: ClipRRect(
-                        borderRadius: BorderRadius.circular(30.0),
-                        child: Image.asset('asset/images/vector/doctor.png',
-                            fit: BoxFit.contain),
-                      ),
-                      title: Text(
-                        items[index],
-                        style: TextStyle(
-                            fontSize: 17, fontWeight: FontWeight.w700),
-                      ),
-                      subtitle: Text('Lorem inpus'),
-                      trailing: Text(
-                        '09.20 PM',
-                        style: TextStyle(
-                            fontSize: 14,
-                            color: const Color.fromRGBO(152, 152, 152, 1)),
+                    return InkWell(
+                      onTap: (){
+                        Navigator.pushNamed(context, '/chat');
+                      },
+                      child: ListTile(
+                        leading: ClipRRect(
+                          borderRadius: BorderRadius.circular(30.0),
+                          child: Image.asset('asset/images/vector/doctor.png',
+                              fit: BoxFit.contain),
+                        ),
+                        title: Text(
+                          items[index],
+                          style: TextStyle(
+                              fontSize: 17, fontWeight: FontWeight.w700),
+                        ),
+                        subtitle: Text('Lorem inpus'),
+                        trailing: Text(
+                          '09.20 PM',
+                          style: TextStyle(
+                              fontSize: 14,
+                              color: const Color.fromRGBO(152, 152, 152, 1)),
+                        ),
                       ),
                     );
                   },

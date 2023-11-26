@@ -72,7 +72,7 @@ class _ListDoctorState extends State<ListDoctor> {
                         subtitle: Text('Lorem inpus'),
                         trailing: InkWell(
                           onTap: () {
-                            Navigator.pushReplacementNamed(context, '/chat');
+                            Navigator.pushNamed(context, '/chat');
                           },
                           child: SvgPicture.asset('asset/images/icon/right.svg'),
                         ),
